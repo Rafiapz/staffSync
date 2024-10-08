@@ -278,7 +278,6 @@ const data = [
 
 export const EmployeeProvider: FC<any> = ({ children }) => {
    const [employees, setEmployees] = useState<IEmployee[]>(data);
-   const [originalData] = useState(data);
 
    const addEmployee = (employee: IEmployee) => {
       employee.id = employees.length + 1;
