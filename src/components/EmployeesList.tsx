@@ -3,6 +3,7 @@ import { IEmployee } from "../interface/IEmployee";
 import { faTrashAlt } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useEmployees } from "../store/EmployeeProvider";
+import toast from "react-hot-toast";
 
 const EmployeesList: FC<{ employees: IEmployee[]; handleEditModal: any }> = ({ employees, handleEditModal }) => {
    const { removeEmployee } = useEmployees();
@@ -13,6 +14,7 @@ const EmployeesList: FC<{ employees: IEmployee[]; handleEditModal: any }> = ({ e
 
    const handleDelete = (id: string) => {
       removeEmployee(id);
+      toast.success("Deleted successfully");
    };
    return (
       <div className="flex flex-col">
