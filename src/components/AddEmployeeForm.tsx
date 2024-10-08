@@ -22,6 +22,7 @@ const AddEmployeeForm: FC<{ isAddModalOpen: boolean; setIsAddModalOpen: any }> =
    const handleSubmit = (values: IEmployee) => {
       addEmployee(values);
       toast.success("Employee added successfully");
+      setIsAddModalOpen(false);
    };
 
    return (

@@ -13,9 +13,9 @@ const EditEmployee: FC<any> = ({ setIsEditModalOpen, isEditModalOpen, currentEmp
    };
    const { updateEmployee } = useEmployees();
    const handleSubmit = (values: IEmployee) => {
-      console.log("edited");
       updateEmployee(currentEmployee?.id, values);
       toast.success("Employee edited successfully");
+      setIsEditModalOpen(false);
    };
 
    return (
