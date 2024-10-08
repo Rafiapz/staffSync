@@ -304,7 +304,6 @@ export const EmployeeProvider: FC<any> = ({ children }) => {
          });
          setEmployees(updated);
       } else {
-         setEmployees(originalData);
       }
    };
    return (
